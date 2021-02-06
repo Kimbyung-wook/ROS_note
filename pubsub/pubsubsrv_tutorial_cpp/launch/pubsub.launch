@@ -1,0 +1,8 @@
+<launch>
+    <group ns="pubsubs">
+        <node pkg="pubsub_tutorial_cpp"
+            name="pub" output="screen" type="talker"/>
+        <node pkg="pubsub_tutorial_cpp"
+            name="sub" output="screen" type="listener"/>
+    </group>
+</launch>
