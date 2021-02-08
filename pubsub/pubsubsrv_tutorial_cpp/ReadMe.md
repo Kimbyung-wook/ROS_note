@@ -1,6 +1,6 @@
 # Intro
 
-코드 기반하여 만들었습니다.
+ROS의 tutorial 코드 기반하여 만들었습니다.
 
 기본 구조는 publisher node가 Service Server를 같이 가지고 있는 구조입니다.
 
