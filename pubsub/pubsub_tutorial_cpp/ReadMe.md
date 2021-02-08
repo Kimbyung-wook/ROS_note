@@ -16,6 +16,11 @@ http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
 * rosrun pubsub_tutorial_cpp talker
 * rosrun pubsub_tutorial_cpp listener
 
+or
+
+* roslaunch pubsub_tutorial_cpp pubsub.launch
+
+
 ### for testing service-client
 
 * rosrun pubsub_tutorial_cpp server
