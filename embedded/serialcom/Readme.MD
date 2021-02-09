@@ -12,6 +12,30 @@ Both node print healty messages each second.
 * rosrun serialcom serialreceive
 * rosrun serialcom serialsend
 
+Terminal 1 : Sender
+> [ INFO] Loop start 
+> [ INFO] Healty
+> [ INFO] Send : Time to send 0th
+> [ INFO] Healty
+> [ INFO] Send : Time to send 1th
+> [ INFO] Healty
+> [ INFO] Send : Time to send 2th
+> [ INFO] Healty
+> [ INFO] Send : Time to send 3th
+
+Terminal 2 : Receiver
+> [ INFO] Loop start
+> [ INFO] Healty
+> [ INFO] Receive 17 : Time to send 0th
+> [ INFO] Healty
+> [ INFO] Receive 17 : Time to send 1th
+> [ INFO] Healty
+> [ INFO] Receive 17 : Time to send 2th
+> [ INFO] Healty
+> [ INFO] Receive 17 : Time to send 3th
+
+
+
 
 This repo is refered from ...
 * **Linux C++ serial programming ROS**, Available at https://www.programmersought.com/article/551142478/
