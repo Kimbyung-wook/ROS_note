@@ -1,0 +1,12 @@
+<launch>
+
+<arg name="serialport" default= "/dev/ttyUSB0"/>
+<arg name="baudrate" default= "57600"/>
+
+<group ns="serialcom">
+    <node name="receiver" pkg="serialcom" output="screen" type="serialreceive_arg">
+        <param name="serialreceiver_arg/port" value="$(arg serialport)" />
+        <param name="serialreceiver_arg/baud" value="$(arg baudrate)" />
+    </node>
+</group>
+</launch>        

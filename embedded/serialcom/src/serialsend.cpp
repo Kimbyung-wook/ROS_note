@@ -17,6 +17,12 @@ int main(int argc, char **argv)
   std::string port_path = "/dev/ttyUSB0"; 
   fd = open(port_path.c_str(),O_RDWR | O_NOCTTY | O_NONBLOCK);
 
+  if(fd == 0)
+  {
+    ROS_ERROR("Failed to open %s",port_path.c_str());
+    return 0;
+  }
+
 	struct termios newtermios;
 	memset( &newtermios, 0, sizeof(newtermios) );
 	newtermios.c_cflag       = B57600 | CS8 | CLOCAL | CREAD;

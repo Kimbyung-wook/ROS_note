@@ -120,9 +120,10 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/serialcom.cpp
-# )
+add_library(${PROJECT_NAME}
+  include/SerialCom.h
+  src/SerialCom.cpp
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -139,6 +140,27 @@ target_link_libraries(serialsend  ${catkin_LIBRARIES} )
 add_executable(serialreceive src/serialreceive.cpp)
 target_link_libraries(serialreceive  ${catkin_LIBRARIES} )
 # add_dependencies(serialreceive serial_cpp)
+
+add_executable(serialsend_arg src/serialsend_arg.cpp)
+target_link_libraries(serialsend_arg  ${catkin_LIBRARIES} )
+# add_dependencies(serialsend serial_cpp)
+
+add_executable(serialreceive_arg src/serialreceive_arg.cpp)
+target_link_libraries(serialreceive_arg  ${catkin_LIBRARIES} )
+# add_dependencies(serialreceive serial_cpp)
+
+add_executable(serialsend_class src/serialsend_class.cpp)
+target_link_libraries(serialsend_class
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+)
+
+add_executable(serialreceive_class src/serialreceive_class.cpp)
+target_link_libraries(serialreceive_class
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+)
+# add_dependencies(serialsend serial_cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
